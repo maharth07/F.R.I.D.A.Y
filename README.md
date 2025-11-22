@@ -1,4 +1,4 @@
-# Friday.py — Voice Assistant (README)
+# F.R.I.D.A.Y — Voice Assistant
 
 This README documents the `Friday.py` voice assistant found in this repository. It explains what the script does, required dependencies, how to run it, example voice commands, and troubleshooting tips.
 
@@ -14,7 +14,7 @@ This README documents the `Friday.py` voice assistant found in this repository. 
 - Python 3.8 or newer is recommended.
 - Required Python packages (install with pip):
 
-```powershell
+```Terminal
 python -m pip install SpeechRecognition pyttsx3 pywhatkit wikipedia pyjokes pytz
 pip install pipwin
 pipwin install pyaudio
@@ -32,7 +32,7 @@ Notes on individual packages:
 
 Run the assistant:
 
-```powershell
+```Terminal
 python Friday.py
 ```
 
@@ -42,7 +42,6 @@ The script runs a continuous loop listening for commands. Use Ctrl+C in the term
 - "Play <song or video name>" — plays the specified title on YouTube.
 - "Time" or "What is the time" — replies with the current time in India (IST).
 - "Date" or "What is the date" — replies with today's date.
-- "Who is <person>" — reads a short summary from Wikipedia.
 - "Open notepad" — launches Notepad (Windows).
 - "Open calculator" — launches Calculator (Windows).
 - "Tell me a joke" or "Joke" — tells a joke using `pyjokes`.
@@ -50,15 +49,3 @@ The script runs a continuous loop listening for commands. Use Ctrl+C in the term
 ## Privacy and network notes
 - Speech recognition with `recognize_google` sends audio to Google servers for transcription; do not use with sensitive audio.
 - `pywhatkit` and `wikipedia` open network connections for search and lookup.
-
-## Troubleshooting
-- Microphone not detected: ensure microphone is connected and Windows privacy settings allow apps to access the microphone. Verify with other apps first.
-- `sr.RequestError` (network error): check the internet connection; Google's recognizer requires network access.
-- `sr.UnknownValueError` (unrecognized speech): try speaking more clearly, reducing background noise, or increasing `listener.adjust_for_ambient_noise(source, duration=1)` duration.
-- TTS issues (no audio or errors): ensure system TTS works (Windows Settings → Speech). If `pyttsx3` fails, reinstall it and its dependencies.
-- Module import errors: install missing packages with pip as shown above.
-
-## License & Safety
-- This code is a small hobby project; review third-party package licenses before redistribution.
-- Be cautious with privacy: do not use the assistant with sensitive conversations since audio may be sent to third-party services.
-
