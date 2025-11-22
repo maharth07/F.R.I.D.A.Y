@@ -1,0 +1,13 @@
+PROJECT REPORT:VOICE ASSISTANT IN PYTHON
+
+1.  Introduction
+This project implements a voice assistant using Python. It uses speech recognition to listen for commands, text-to-speech for replies, and integrates additional libraries for tasks like playing YouTube videos, fetching Wikipedia summaries, and telling jokes.
+
+2.  Objectives
+- Build an interactive voice assistant - Enable voice-based commands - Use APIs and libraries to perform tasks like information retrieval and media playback
+
+3.  System Requirements
+- Python 3.x - Internet connection - Microphone - Libraries: speech_recognition, pyttsx3, pywhatkit, wikipedia, pyjokes
+
+4.  Conclusion
+This project demonstrates a functional voice assistant using Python. The assistant can be expanded further with more features such as smart home integration, reminders, or offline speech models.
